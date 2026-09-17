@@ -1,149 +1,811 @@
-/* ========================================
-   ROBERA TEMESGEN PORTFOLIO
-   JAVASCRIPT
-======================================== */
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
-document.addEventListener("DOMContentLoaded", function () {
-	console.log("Welcome to Robera Temesgen's portfolio!");
-});
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-const currentYear = new Date().getFullYear();
-const footerYear = document.querySelector("footer p");
+    <meta name="description"
+          content="Robera Temesgen - Information Systems Student and Future Web Developer">
 
-if (footerYear) {
-	footerYear.innerHTML = "&copy; " + currentYear + " Robera Temesgen. All rights reserved.";
-}
+    <meta name="author"
+          content="Robera Temesgen">
 
-const navigationLinks = document.querySelectorAll("nav a");
+    <title>Robera Temesgen | Web Developer</title>
 
-navigationLinks.forEach(function (link) {
-	link.addEventListener("click", function () {
-		console.log("Navigation link clicked:", link.textContent);
-	});
-});
+    <link rel="stylesheet" href="style.css">
+</head>
 
-const homeSection = document.querySelector("#home");
+<body>
 
-if (homeSection) {
-	const welcomeMessage = document.createElement("p");
-	welcomeMessage.textContent = "Thank you for visiting my portfolio!";
-	welcomeMessage.id = "welcome-message";
-	homeSection.appendChild(welcomeMessage);
-}
+    <!-- ================= HEADER ================= -->
 
-const projectLinks = document.querySelectorAll("#projects a");
+    <header class="site-header">
 
-projectLinks.forEach(function (link) {
-	link.addEventListener("click", function () {
-		console.log("Project link clicked.");
-	});
-});
+        <div class="container nav-container">
 
-const emailLink = document.querySelector('a[href^="mailto:"]');
+            <a href="#home" class="logo">
+                Robera Temesgen
+            </a>
 
-if (emailLink) {
-	emailLink.addEventListener("click", function () {
-		console.log("Email link clicked.");
-	});
-}
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
 
-const contactForm = document.querySelector("#contact form");
+            <nav id="mainNav" class="main-nav">
 
-if (contactForm) {
-	contactForm.addEventListener("submit", function (event) {
-		const name = document.querySelector("#name").value.trim();
-		const email = document.querySelector("#email").value.trim();
-		const message = document.querySelector("#message").value.trim();
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#goals">Goals</a>
+                <a href="#journey">Journey</a>
+                <a href="#contact">Contact</a>
 
-		if (name === "") {
-			event.preventDefault();
-			alert("Please enter your name.");
-			return;
-		}
+            </nav>
 
-		if (email === "") {
-			event.preventDefault();
-			alert("Please enter your email address.");
-			return;
-		}
+        </div>
 
-		if (message === "") {
-			event.preventDefault();
-			alert("Please enter your message.");
-			return;
-		}
+    </header>
 
-		alert("Thank you, " + name + "! Your message is ready to be sent.");
-	});
-}
 
-const darkModeButton = document.createElement("button");
-darkModeButton.textContent = "Dark Mode";
-darkModeButton.id = "dark-mode-button";
-darkModeButton.style.position = "fixed";
-darkModeButton.style.bottom = "20px";
-darkModeButton.style.right = "20px";
-darkModeButton.style.padding = "10px 15px";
-darkModeButton.style.border = "none";
-darkModeButton.style.borderRadius = "6px";
-darkModeButton.style.cursor = "pointer";
-darkModeButton.style.zIndex = "1000";
-document.body.appendChild(darkModeButton);
+    <main>
 
-let darkMode = false;
+        <!-- ================= HOME ================= -->
 
-darkModeButton.addEventListener("click", function () {
-	darkMode = !darkMode;
+        <section id="home" class="hero">
 
-	if (darkMode) {
-		document.body.style.backgroundColor = "#111827";
-		document.body.style.color = "#ffffff";
-		darkModeButton.textContent = "Light Mode";
-	} else {
-		document.body.style.backgroundColor = "#f5f7fa";
-		document.body.style.color = "#222222";
-		darkModeButton.textContent = "Dark Mode";
-	}
-});
+            <div class="container hero-content">
 
-const topButton = document.createElement("button");
-topButton.textContent = "↑ Top";
-topButton.id = "top-button";
-topButton.style.position = "fixed";
-topButton.style.bottom = "20px";
-topButton.style.left = "20px";
-topButton.style.padding = "10px 15px";
-topButton.style.border = "none";
-topButton.style.borderRadius = "6px";
-topButton.style.cursor = "pointer";
-topButton.style.display = "none";
-topButton.style.zIndex = "1000";
-document.body.appendChild(topButton);
+                <div class="hero-text">
 
-window.addEventListener("scroll", function () {
-	topButton.style.display = window.scrollY > 300 ? "block" : "none";
-});
+                    <p class="eyebrow">
+                        Information Systems Student
+                    </p>
 
-topButton.addEventListener("click", function () {
-	window.scrollTo({ top: 0, behavior: "smooth" });
-});
+                    <h1>
+                        Hello, I'm
+                        <span>Robera Temesgen</span>
+                    </h1>
 
-const helloButton = document.createElement("button");
-helloButton.textContent = "Say Hello";
-helloButton.style.margin = "10px";
-helloButton.style.padding = "12px 20px";
-helloButton.style.cursor = "pointer";
+                    <h2>
+                        Future Web Developer
+                    </h2>
 
-if (homeSection) {
-	homeSection.appendChild(helloButton);
-}
+                    <p>
+                        I am an Information Systems student learning
+                        web development and building practical projects
+                        to improve my programming and technology skills.
+                    </p>
 
-helloButton.addEventListener("click", function () {
-	alert("Hello! Welcome to Robera Temesgen's portfolio.");
-});
+                    <div class="hero-buttons">
 
-document.addEventListener("keydown", function (event) {
-	console.log("You pressed:", event.key);
-});
+                        <a href="#projects" class="btn primary-btn">
+                            Explore My Projects
+                        </a>
 
-console.log("JavaScript is successfully connected!");
+                        <a href="#contact" class="btn secondary-btn">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+                <div class="about-content">
+
+                    <div>
+                        <h3>Who I Am</h3>
+
+                        <p>
+                            I am an Information Systems student with a strong
+                            interest in technology, programming, and web
+                            development.
+                        </p>
+
+                        <p>
+                            I am currently developing my skills by studying
+                            HTML, CSS, JavaScript, C++, and other technology
+                            topics.
+                        </p>
+
+                        <p>
+                            My goal is to become a professional web developer
+                            and create useful digital solutions for real-world
+                            users and organizations.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>Current Focus</h3>
+ <ul>
+                            <li>Web Development</li>
+                            <li>JavaScript</li>
+                            <li>Programming</li>
+                            <li>Information Systems</li>
+                            <li>Professional Development</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section alternate-section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Skills
+                </h2>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <h3>HTML</h3>
+                        <p>
+                            Building structured and semantic web pages.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>CSS</h3>
+                        <p>
+                            Creating responsive and attractive interfaces.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>JavaScript</h3>
+                        <p>
+                            Adding interaction and functionality to websites.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>C++</h3>
+                        <p>
+                            Learning programming fundamentals and logic.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Information Systems</h3>
+                        <p>
+                            Studying systems, technology, and business processes.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Problem Solving</h3>
+                        <p>
+                            Developing logical approaches to technical problems.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Projects
+                </h2>
+
+                <p class="section-intro">
+                    These projects demonstrate my learning and practical
+                    programming experience.
+                </p>
+
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 01
+                        </span>
+
+                        <h3>
+                            Personal Portfolio Website
+                        </h3>
+
+                        <p>
+                            A responsive personal portfolio website designed
+                            to introduce myself, display my skills, projects,
+                            goals, and contact information.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Technologies:</strong>
+                            HTML, CSS, JavaScript
+                        </p>
+
+                        <a
+                            href="#home"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 02
+                        </span>
+ <h3>
+                            Bank Account Balance Tracker
+                        </h3>
+
+                        <p>
+                            An interactive beginner banking project that
+                            demonstrates account creation, balance checking,
+                            deposits, withdrawals, and account information.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Technology:</strong>
+                            JavaScript
+                        </p>
+
+                        <a
+                            href="#bank-project"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 03
+                        </span>
+
+                        <h3>
+                            Number Guessing Game
+                        </h3>
+
+                        <p>
+                            An interactive game where users try to guess
+                            a randomly generated number between 1 and 100.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Technology:</strong>
+                            JavaScript
+                        </p>
+
+                        <a
+                            href="#guessing-game"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 04
+                        </span>
+
+                        <h3>
+                            Future Web Projects
+                        </h3>
+
+                        <p>
+                            A collection of future practical websites and
+                            web applications that I plan to build as my
+                            development skills grow.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Focus:</strong>
+                            Web Development
+                        </p>
+
+                        <a
+                            href="#future-projects"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= BANK PROJECT ================= -->
+
+                <section
+                    id="bank-project"
+                    class="project-demo">
+
+                    <div class="demo-header">
+
+                        <span class="project-number">
+                            Interactive Project
+                        </span>
+
+                        <h2>
+                            Bank Account Balance Tracker
+                        </h2>
+
+                        <p>
+                            Create an account and use the banking menu
+                            to manage your balance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bank-form">
+
+                        <div class="form-group">
+
+                            <label for="accountName">
+                                Account Holder Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="accountName"
+                                placeholder="Example: Robera Temesgen">
+
+                        </div>
+
+
+                        <div class="form-group">
+                         <label for="accountNumber">
+                                Account Number
+                            </label>
+
+                            <input
+                                type="number"
+                                id="accountNumber"
+                                placeholder="Example: 123456">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="initialBalance">
+                                Initial Balance
+                            </label>
+
+                            <input
+                                type="number"
+                                id="initialBalance"
+                                min="0"
+                                step="0.01"
+                                placeholder="Example: 500">
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="createAccountBtn"
+                            class="btn primary-btn">
+                            Create Account
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="accountMessage"
+                        class="message"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+
+                    <div
+                        id="accountMenu"
+                        class="account-menu hidden">
+
+                        <h3>
+                            Account Menu
+                        </h3>
+
+                        <div class="bank-buttons">
+
+                            <button
+                                type="button"
+                                id="checkBalanceBtn"
+                                class="btn">
+                                Check Balance
+                            </button>
+
+                            <button
+                                type="button"
+                                id="depositBtn"
+                                class="btn">
+                                Deposit Money
+                            </button>
+
+                            <button
+                                type="button"
+                                id="withdrawBtn"
+                                class="btn">
+                                Withdraw Money
+                            </button>
+
+                            <button
+                                type="button"
+                                id="accountInfoBtn"
+                                class="btn">
+                                Account Information
+                            </button>
+
+                        </div>
+
+                        <div
+                            id="bankResult"
+                            class="result-box"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= NUMBER GAME ================= -->
+
+                <section
+                    id="guessing-game"
+                    class="project-demo">
+
+                    <div class="demo-header">
+
+                        <span class="project-number">
+                            Interactive Project
+                        </span>
+
+                        <h2>
+                            Number Guessing Game
+                        </h2>
+
+                        <p>
+                            Try to guess a number between 1 and 100.
+                        </p>
+
+                    </div>
+
+
+                    <div class="game-box">
+
+                        <label for="guessInput">
+                            Enter your guess
+                        </label>
+
+                        <div class="game-controls">
+                       <input
+                                type="number"
+                                id="guessInput"
+                                min="1"
+                                max="100"
+                                placeholder="1 - 100">
+
+                            <button
+                                type="button"
+                                id="guessBtn"
+                                class="btn primary-btn">
+                                Guess
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            id="guessResult"
+                            class="game-result"
+                            role="status"
+                            aria-live="polite">
+                            Start the game!
+                        </p>
+
+
+                        <button
+                            type="button"
+                            id="newGameBtn"
+                            class="btn secondary-btn">
+                            New Game
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= FUTURE PROJECTS ================= -->
+
+                <section
+                    id="future-projects"
+                    class="project-demo">
+
+                    <div class="demo-header">
+
+                        <span class="project-number">
+                            Future Projects
+                        </span>
+
+                        <h2>
+                            Future Web Projects
+                        </h2>
+
+                        <p>
+                            I am continuing to learn and build practical
+                            projects.
+                        </p>
+
+                    </div>
+
+                    <div class="future-list">
+
+                        <div>
+                            <h3>Responsive Websites</h3>
+                            <p>
+                                Websites that work well on phones,
+                                tablets, and computers.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>JavaScript Applications</h3>
+                            <p>
+                                Interactive applications using JavaScript.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Real-World Projects</h3>
+                            <p>
+                                Projects designed to solve practical problems.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Modern Web Technologies</h3>
+                            <p>
+                                Continue learning modern frontend technologies.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GOALS ================= -->
+
+        <section id="goals" class="section alternate-section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Goals
+                </h2>
+
+                <div class="goals-grid">
+
+                    <article class="goal-card">
+                        <h3>Become a Web Developer</h3>
+                        <p>
+                            Build strong frontend and backend development skills.
+                        </p>
+                    </article>
+
+                    <article class="goal-card">
+                        <h3>Build Real Projects</h3>
+                        <p>
+                            Create useful projects that demonstrate my skills.
+                        </p>
+                    </article>
+                    <article class="goal-card">
+                        <h3>Grow Professionally</h3>
+                        <p>
+                            Develop communication, teamwork, and professional skills.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LEARNING JOURNEY ================= -->
+
+        <section id="journey" class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Learning Journey
+                </h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span>01</span>
+                        <h3>Information Systems</h3>
+                        <p>
+                            Building my academic foundation in Information Systems.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>02</span>
+                        <h3>Programming</h3>
+                        <p>
+                            Learning programming concepts using C++ and JavaScript.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>03</span>
+                        <h3>Web Development</h3>
+                        <p>
+                            Practicing HTML, CSS, and JavaScript by building projects.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>04</span>
+                        <h3>Professional Development</h3>
+                        <p>
+                            Preparing to work on real-world technology projects.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <p class="section-intro">
+            If you would like to connect with me, you can contact
+            me through email or LinkedIn.
+        </p>
+
+        <div class="contact-buttons">
+
+            <!-- EMAIL -->
+            <a
+                href="mailto:roberaterefe0@gmail.com"
+                class="btn primary-btn">
+                Email Me
+            </a>
+
+            <!-- LINKEDIN -->
+            <a
+                href="https://et.linkedin.com/in/robera-terefe-464663382"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary-btn">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Robera Temesgen. All rights reserved.
+            </p>
+
+            <p>
+                Information Systems Student | Future Web Developer
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+
+    <a
+        href="#home"
+        class="back-to-top"
+        aria-label="Back to top">
+        ↑ Top
+    </a>
+
+
+    <!-- DARK MODE -->
+
+    <button
+        type="button"
+        id="darkModeBtn"
+        class="dark-mode-btn">
+        Dark Mode
+    </button>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
