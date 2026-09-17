@@ -1,464 +1,811 @@
- /* ========================================
-   GENERAL SETTINGS
-======================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f7fa;
-    color: #222;
-}
-
-
-/* ========================================
-   HEADER
-======================================== */
-
-header {
-    background-color: #111827;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 18px;
-    margin-bottom: 25px;
-    color: #d1d5db;
-}
-
-
-/* ========================================
-   NAVIGATION
-======================================== */
-
-nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 12px;
-}
-
-nav a:hover {
-    color: #38bdf8;
-}
-
-
-/* ========================================
-   MAIN CONTENT
-======================================== */
-
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-section {
-    padding: 70px 20px;
-    margin-bottom: 20px;
-}
-
-section h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #111827;
-}
-
-section h3 {
-    margin-top: 20px;
-    margin-bottom: 15px;
-    color: #1f2937;
-}
-
-section p {
-    margin-bottom: 15px;
-}
-
-
-/* ========================================
-   HOME SECTION
-======================================== */
-
-#home {
-    text-align: center;
-    background-color: white;
-    padding: 100px 30px;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-#home h2 {
-    font-size: 24px;
-    color: #2563eb;
-    margin-bottom: 15px;
-}
-
-#home h3 {
-    font-size: 40px;
-    color: #111827;
-    margin-bottom: 20px;
-}
-
-#home p {
-    max-width: 750px;
-    margin: 0 auto 20px;
-}
-
-
-/* ========================================
-   BUTTONS
-======================================== */
-
-a {
-    color: #2563eb;
-}
-
-#home a,
-button {
-    display: inline-block;
-    background-color: #2563eb;
-    color: white;
-    text-decoration: none;
-    padding: 12px 22px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px;
-}
-
-#home a:hover,
-button:hover {
-    background-color: #1d4ed8;
-}
-
-
-/* ========================================
-   ABOUT SECTION
-======================================== */
-
-#about {
-    background-color: white;
-    border-radius: 12px;
-}
-
-#about p {
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#about ul {
-    max-width: 850px;
-    margin: 20px auto;
-    padding-left: 30px;
-}
-
-
-/* ========================================
-   SKILLS SECTION
-======================================== */
-
-#skills {
-    background-color: #eef2ff;
-    border-radius: 12px;
-}
-
-#skills h3 {
-    text-align: center;
-}
-
-#skills ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-#skills li {
-    background-color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-
-/* ========================================
-   PROJECTS SECTION
-======================================== */
-
-#projects {
-    background-color: white;
-    border-radius: 12px;
-}
-
-#projects article {
-    background-color: #f9fafb;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 10px;
-    border-left: 5px solid #2563eb;
-}
-
-#projects article h3 {
-    color: #111827;
-    font-size: 22px;
-}
-
-#projects article a {
-    display: inline-block;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-
-/* ========================================
-   GOALS SECTION
-======================================== */
-
-#goals {
-    background-color: #eef2ff;
-    border-radius: 12px;
-}
-
-#goals ol {
-    max-width: 750px;
-    margin: auto;
-    padding-left: 30px;
-}
- #goals li {
-    margin-bottom: 15px;
-    padding-left: 5px;
-}
-
-
-/* ========================================
-   LEARNING JOURNEY
-======================================== */
-
-#learning {
-    background-color: white;
-    border-radius: 12px;
-}
-
-#learning p {
-    text-align: center;
-}
-
-#learning ol {
-    max-width: 850px;
-    margin: 25px auto;
-    padding-left: 30px;
-}
-
-#learning li {
-    margin-bottom: 18px;
-}
-
-
-/* ========================================
-   CONTACT SECTION
-======================================== */
-
-#contact {
-    background-color: #eef2ff;
-    border-radius: 12px;
-}
-
-#contact > p {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 30px;
-}
-
-#contact h3 {
-    text-align: center;
-}
-
-#contact ul {
-    list-style: none;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-#contact li {
-    margin: 10px;
-}
-
-#contact form {
-    max-width: 650px;
-    margin: 30px auto 0;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-}
-
-#contact label {
-    font-weight: bold;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 7px;
-    margin-bottom: 15px;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    font-size: 16px;
-    font-family: inherit;
-}
-
-#contact textarea {
-    resize: vertical;
-}
-
-#contact button {
-    display: block;
-    margin: 10px auto 0;
-}
-
-
-/* ========================================
-   FOOTER
-======================================== */
-
-footer {
-    background-color: #111827;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer p {
-    margin: 5px;
-    color: #d1d5db;
-}
-
-
-/* ========================================
-   RESPONSIVE DESIGN
-   FOR TABLETS AND PHONES
-======================================== */
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 32px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    nav {
-        gap: 8px;
-    }
-
-    nav a {
-        padding: 6px 8px;
-        font-size: 14px;
-    }
-
-    section {
-        padding: 50px 15px;
-    }
-
-    section h2 {
-        font-size: 28px;
-    }
-
-    #home {
-        padding: 70px 20px;
-    }
-
-    #home h3 {
-        font-size: 30px;
-    }
-
-    #home p {
-        font-size: 15px;
-    }
-
-    #skills ul {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #skills li {
-        text-align: center;
-    }
-
-    #contact form {
-        padding: 20px;
-    }
-
-}
-
-
-/* ========================================
-   SMALL PHONES
-======================================== */
-
-@media (max-width: 480px) {
-
-    header {
-        padding: 30px 15px;
-    }
-
-    header h1 {
-        font-size: 27px;
-    }
-
-    header p {
-        font-size: 14px;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    #home h3 {
-        font-size: 26px;
-    }
-
-    #home a {
-        display: block;
-        margin: 10px auto;
-        max-width: 220px;
-    }
-
-    section h2 {
-        font-size: 25px;
-    }
-
-}
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Robera Temesgen - Information Systems Student and Future Web Developer">
+
+    <meta name="author"
+          content="Robera Temesgen">
+
+    <title>Robera Temesgen | Web Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="container nav-container">
+
+            <a href="#home" class="logo">
+                Robera Temesgen
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav id="mainNav" class="main-nav">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#goals">Goals</a>
+                <a href="#journey">Journey</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="hero">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <p class="eyebrow">
+                        Information Systems Student
+                    </p>
+
+                    <h1>
+                        Hello, I'm
+                        <span>Robera Temesgen</span>
+                    </h1>
+
+                    <h2>
+                        Future Web Developer
+                    </h2>
+
+                    <p>
+                        I am an Information Systems student learning
+                        web development and building practical projects
+                        to improve my programming and technology skills.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn primary-btn">
+                            Explore My Projects
+                        </a>
+
+                        <a href="#contact" class="btn secondary-btn">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section id="about" class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+                <div class="about-content">
+
+                    <div>
+                        <h3>Who I Am</h3>
+
+                        <p>
+                            I am an Information Systems student with a strong
+                            interest in technology, programming, and web
+                            development.
+                        </p>
+
+                        <p>
+                            I am currently developing my skills by studying
+                            HTML, CSS, JavaScript, C++, and other technology
+                            topics.
+                        </p>
+
+                        <p>
+                            My goal is to become a professional web developer
+                            and create useful digital solutions for real-world
+                            users and organizations.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+
+                        <h3>Current Focus</h3>
+ <ul>
+                            <li>Web Development</li>
+                            <li>JavaScript</li>
+                            <li>Programming</li>
+                            <li>Information Systems</li>
+                            <li>Professional Development</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section alternate-section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Skills
+                </h2>
+
+                <div class="skills-grid">
+
+                    <article class="skill-card">
+                        <h3>HTML</h3>
+                        <p>
+                            Building structured and semantic web pages.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>CSS</h3>
+                        <p>
+                            Creating responsive and attractive interfaces.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>JavaScript</h3>
+                        <p>
+                            Adding interaction and functionality to websites.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>C++</h3>
+                        <p>
+                            Learning programming fundamentals and logic.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Information Systems</h3>
+                        <p>
+                            Studying systems, technology, and business processes.
+                        </p>
+                    </article>
+
+                    <article class="skill-card">
+                        <h3>Problem Solving</h3>
+                        <p>
+                            Developing logical approaches to technical problems.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Projects
+                </h2>
+
+                <p class="section-intro">
+                    These projects demonstrate my learning and practical
+                    programming experience.
+                </p>
+
+
+                <div class="projects-grid">
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 01
+                        </span>
+
+                        <h3>
+                            Personal Portfolio Website
+                        </h3>
+
+                        <p>
+                            A responsive personal portfolio website designed
+                            to introduce myself, display my skills, projects,
+                            goals, and contact information.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Technologies:</strong>
+                            HTML, CSS, JavaScript
+                        </p>
+
+                        <a
+                            href="#home"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 02
+                        </span>
+ <h3>
+                            Bank Account Balance Tracker
+                        </h3>
+
+                        <p>
+                            An interactive beginner banking project that
+                            demonstrates account creation, balance checking,
+                            deposits, withdrawals, and account information.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Technology:</strong>
+                            JavaScript
+                        </p>
+
+                        <a
+                            href="#bank-project"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 03
+                        </span>
+
+                        <h3>
+                            Number Guessing Game
+                        </h3>
+
+                        <p>
+                            An interactive game where users try to guess
+                            a randomly generated number between 1 and 100.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Technology:</strong>
+                            JavaScript
+                        </p>
+
+                        <a
+                            href="#guessing-game"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="project-card">
+
+                        <span class="project-number">
+                            Project 04
+                        </span>
+
+                        <h3>
+                            Future Web Projects
+                        </h3>
+
+                        <p>
+                            A collection of future practical websites and
+                            web applications that I plan to build as my
+                            development skills grow.
+                        </p>
+
+                        <p class="technology">
+                            <strong>Focus:</strong>
+                            Web Development
+                        </p>
+
+                        <a
+                            href="#future-projects"
+                            class="btn project-btn">
+                            View Project
+                        </a>
+
+                    </article>
+
+                </div>
+
+
+                <!-- ================= BANK PROJECT ================= -->
+
+                <section
+                    id="bank-project"
+                    class="project-demo">
+
+                    <div class="demo-header">
+
+                        <span class="project-number">
+                            Interactive Project
+                        </span>
+
+                        <h2>
+                            Bank Account Balance Tracker
+                        </h2>
+
+                        <p>
+                            Create an account and use the banking menu
+                            to manage your balance.
+                        </p>
+
+                    </div>
+
+
+                    <div class="bank-form">
+
+                        <div class="form-group">
+
+                            <label for="accountName">
+                                Account Holder Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="accountName"
+                                placeholder="Example: Robera Temesgen">
+
+                        </div>
+
+
+                        <div class="form-group">
+                         <label for="accountNumber">
+                                Account Number
+                            </label>
+
+                            <input
+                                type="number"
+                                id="accountNumber"
+                                placeholder="Example: 123456">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="initialBalance">
+                                Initial Balance
+                            </label>
+
+                            <input
+                                type="number"
+                                id="initialBalance"
+                                min="0"
+                                step="0.01"
+                                placeholder="Example: 500">
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            id="createAccountBtn"
+                            class="btn primary-btn">
+                            Create Account
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="accountMessage"
+                        class="message"
+                        role="status"
+                        aria-live="polite">
+                    </div>
+
+
+                    <div
+                        id="accountMenu"
+                        class="account-menu hidden">
+
+                        <h3>
+                            Account Menu
+                        </h3>
+
+                        <div class="bank-buttons">
+
+                            <button
+                                type="button"
+                                id="checkBalanceBtn"
+                                class="btn">
+                                Check Balance
+                            </button>
+
+                            <button
+                                type="button"
+                                id="depositBtn"
+                                class="btn">
+                                Deposit Money
+                            </button>
+
+                            <button
+                                type="button"
+                                id="withdrawBtn"
+                                class="btn">
+                                Withdraw Money
+                            </button>
+
+                            <button
+                                type="button"
+                                id="accountInfoBtn"
+                                class="btn">
+                                Account Information
+                            </button>
+
+                        </div>
+
+                        <div
+                            id="bankResult"
+                            class="result-box"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= NUMBER GAME ================= -->
+
+                <section
+                    id="guessing-game"
+                    class="project-demo">
+
+                    <div class="demo-header">
+
+                        <span class="project-number">
+                            Interactive Project
+                        </span>
+
+                        <h2>
+                            Number Guessing Game
+                        </h2>
+
+                        <p>
+                            Try to guess a number between 1 and 100.
+                        </p>
+
+                    </div>
+
+
+                    <div class="game-box">
+
+                        <label for="guessInput">
+                            Enter your guess
+                        </label>
+
+                        <div class="game-controls">
+                       <input
+                                type="number"
+                                id="guessInput"
+                                min="1"
+                                max="100"
+                                placeholder="1 - 100">
+
+                            <button
+                                type="button"
+                                id="guessBtn"
+                                class="btn primary-btn">
+                                Guess
+                            </button>
+
+                        </div>
+
+
+                        <p
+                            id="guessResult"
+                            class="game-result"
+                            role="status"
+                            aria-live="polite">
+                            Start the game!
+                        </p>
+
+
+                        <button
+                            type="button"
+                            id="newGameBtn"
+                            class="btn secondary-btn">
+                            New Game
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= FUTURE PROJECTS ================= -->
+
+                <section
+                    id="future-projects"
+                    class="project-demo">
+
+                    <div class="demo-header">
+
+                        <span class="project-number">
+                            Future Projects
+                        </span>
+
+                        <h2>
+                            Future Web Projects
+                        </h2>
+
+                        <p>
+                            I am continuing to learn and build practical
+                            projects.
+                        </p>
+
+                    </div>
+
+                    <div class="future-list">
+
+                        <div>
+                            <h3>Responsive Websites</h3>
+                            <p>
+                                Websites that work well on phones,
+                                tablets, and computers.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>JavaScript Applications</h3>
+                            <p>
+                                Interactive applications using JavaScript.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Real-World Projects</h3>
+                            <p>
+                                Projects designed to solve practical problems.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Modern Web Technologies</h3>
+                            <p>
+                                Continue learning modern frontend technologies.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GOALS ================= -->
+
+        <section id="goals" class="section alternate-section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Goals
+                </h2>
+
+                <div class="goals-grid">
+
+                    <article class="goal-card">
+                        <h3>Become a Web Developer</h3>
+                        <p>
+                            Build strong frontend and backend development skills.
+                        </p>
+                    </article>
+
+                    <article class="goal-card">
+                        <h3>Build Real Projects</h3>
+                        <p>
+                            Create useful projects that demonstrate my skills.
+                        </p>
+                    </article>
+                    <article class="goal-card">
+                        <h3>Grow Professionally</h3>
+                        <p>
+                            Develop communication, teamwork, and professional skills.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LEARNING JOURNEY ================= -->
+
+        <section id="journey" class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    My Learning Journey
+                </h2>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <span>01</span>
+                        <h3>Information Systems</h3>
+                        <p>
+                            Building my academic foundation in Information Systems.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>02</span>
+                        <h3>Programming</h3>
+                        <p>
+                            Learning programming concepts using C++ and JavaScript.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>03</span>
+                        <h3>Web Development</h3>
+                        <p>
+                            Practicing HTML, CSS, and JavaScript by building projects.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span>04</span>
+                        <h3>Professional Development</h3>
+                        <p>
+                            Preparing to work on real-world technology projects.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+<section id="contact" class="section contact-section">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <p class="section-intro">
+            If you would like to connect with me, you can contact
+            me through email or LinkedIn.
+        </p>
+
+        <div class="contact-buttons">
+
+            <!-- EMAIL -->
+            <a
+                href="mailto:roberaterefe0@gmail.com"
+                class="btn primary-btn">
+                Email Me
+            </a>
+
+            <!-- LINKEDIN -->
+            <a
+                href="https://et.linkedin.com/in/robera-terefe-464663382"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary-btn">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Robera Temesgen. All rights reserved.
+            </p>
+
+            <p>
+                Information Systems Student | Future Web Developer
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+
+    <a
+        href="#home"
+        class="back-to-top"
+        aria-label="Back to top">
+        ↑ Top
+    </a>
+
+
+    <!-- DARK MODE -->
+
+    <button
+        type="button"
+        id="darkModeBtn"
+        class="dark-mode-btn">
+        Dark Mode
+    </button>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
